@@ -15,14 +15,20 @@ const TodoInput = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex items-center mb-6">
       <input
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder="Add a new todo"
+        placeholder="Add a new task..."
+        className="flex-grow w-full px-4 py-3 text-gray-700 bg-gray-100 border border-gray-300 rounded-l-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
       />
-      <button type="submit">Add</button>
+      <button
+        type="submit"
+        className="px-6 py-3 font-semibold text-white bg-purple-600 rounded-r-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition duration-300"
+      >
+        Add
+      </button>
     </form>
   );
 };
